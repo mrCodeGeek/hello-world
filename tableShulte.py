@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 from tkinter import *
 
@@ -15,10 +15,12 @@ width_v = 4
 # gameZone.pack()
 
 for name in range(h):
+
+	labels.append([])
 	for names in range(w):
-		lb = Label(root, text=str(names), pady=pady_v, width=width_v, relief=GROOVE)
-		lb.grid(row=w, column=(h+1))
-		labels[name][names]=lb
-		lb.pack()
+
+		lb = Label(root, text=str(names+1), pady=pady_v, width=width_v, bd=2, relief=RIDGE)
+		lb.grid(row=name, column=names)
+		labels[name].append(lb)
 
 root.mainloop()
